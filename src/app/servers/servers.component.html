@@ -1,0 +1,18 @@
+<div class="component">
+    <h2>All servers: </h2>
+    <label>Server Name</label>
+    <!-- <input type="text" (input)="onUpdateServerName($event)"> -->
+    <input type="text" [(ngModel)]="serverName">
+    <p>{{serverName}}</p>
+    <hr>
+    <button class="btn btn-primary" 
+        [disabled]="isServerDisabled"
+        (click)="onCreateServer()">
+        Add server
+    </button>
+    <p>{{serverCreationStatus}}</p>
+    <app-server></app-server>
+    <app-server></app-server>
+    <app-server></app-server>
+    <app-server></app-server>
+</div>
